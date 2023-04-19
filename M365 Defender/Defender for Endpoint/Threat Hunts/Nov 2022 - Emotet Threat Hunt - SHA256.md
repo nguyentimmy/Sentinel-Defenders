@@ -1,7 +1,8 @@
-# Emotet SHA256 IOC Threat Hunt - Nov 2022
+# Nov 2022 - Emotet SHA256 IOC Threat Hunt 
 
-#### Source: Ciscos Talos 
-#### Feed information: https://blog.talosintelligence.com/emotet-coming-in-hot/
+**Source:** Ciscos Talos
+
+**Feed:** https://blog.talosintelligence.com/emotet-coming-in-hot/
 
 ### Defender For Endpoint & Microsoft Sentinel
 ```
@@ -10,3 +11,6 @@ DeviceFileEvents
 | where SHA256 in (Emotetsha)
 | project Timestamp, FileName, SHA256, DeviceName, InitiatingProcessCommandLine, InitiatingProcessFileName, InitiatingProcessAccountDomain, InitiatingProcessAccountName
 ```
+:exclamation: You will need to turn on M365 Data connector on Sentinel in order for this KQL to work. 
+
+
