@@ -26,4 +26,4 @@ ASR blocks related to ransomware in your environment.
 - 4️⃣: Send Password Reset Link: Send the user a password reset link to ensure their account is secure. Advise the user to follow the instructions in the password reset email and create a new, strong password.
 - 5️⃣: Scan for Malware: Run a malware scan on the affected device to check for any signs of malware or viruses that may have been downloaded.
 - 6️⃣: Clean and Reconnect: Once the malware scan is complete and no threats are found, clean and reconnect the device to the network or Wi-Fi.
-- ❗: If malware is detected, the affected device must be immediately isolated and the end user notified. A new device should be provided to the user after reimaging the device. The incident must also be escalated to the Incident Response team.
+- 💥 If **malware is detected**, the affected device must be immediately isolated and the end user notified. A new device should be provided to the user after reimaging the device. The incident must also be escalated to the Incident Response team.
