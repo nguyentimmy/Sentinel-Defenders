@@ -1,4 +1,4 @@
-# Nov 2022 - NightHawk SHA256 IOC - Threat Hunt 
+# 2022 Nov - NightHawk SHA256 IOC - Threat Hunt 
 
 ### [+] Defender for Endpoint & Microsoft Sentinel KQL
 ```
