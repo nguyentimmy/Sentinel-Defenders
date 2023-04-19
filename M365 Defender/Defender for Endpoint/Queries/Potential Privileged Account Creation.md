@@ -13,7 +13,7 @@ DeviceProcessEvents
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
-This alert is triggered when a process command line is detected that includes both "net user" and "net localgroup" commands, indicating a potential attempt to create a new user account and add it to a local administrative group. The query also checks if the command line contains "administrators" or "Admins", further narrowing the focus on potential privileged account creation events.
+This alert is triggered when a process command line is detected that includes both "net user" and "net localgroup" commands, indicating a potential attempt to create a new user account and add it to a local administrative group. The query also checks if the command line contains "administrators" or "Admins", further narrowing the focus on potential privileged account creation events. Closely deals with MITRE T1136.001.
 
 ### [+] Potential Mitigation Steps
 1. Investigate the user account and local group modification activity to determine if it was authorized or part of regular administrative tasks.
@@ -21,6 +21,6 @@ This alert is triggered when a process command line is detected that includes bo
 3. If the activity is unauthorized or suspicious, reset the passwords for the affected user accounts and remove any unauthorized users from the local groups.
 
 ### [+] Resources 
-- https://atomicredteam.io/persistence/T1098/
 - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.md
-- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.md#atomic-test-3---create-local-account-with-admin-privileges-using-sysadminctl-utility---macos
+- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.md
+- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1136.001/T1136.001.md
