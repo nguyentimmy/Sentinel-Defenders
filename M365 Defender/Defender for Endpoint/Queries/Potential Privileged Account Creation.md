@@ -23,3 +23,4 @@ This alert is triggered when a process command line is detected that includes bo
 ### [+] Resources 
 - https://atomicredteam.io/persistence/T1098/
 - https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.md
+- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1078.003/T1078.003.md#atomic-test-3---create-local-account-with-admin-privileges-using-sysadminctl-utility---macos
