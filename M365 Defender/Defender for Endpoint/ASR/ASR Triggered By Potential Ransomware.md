@@ -16,7 +16,7 @@ DeviceEvents
 ### [+] Description 
 ASR blocks related to ransomware in your environment.
 
-### [+] Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Recommended Actions
 1. Investigate the ASR blocks triggered by this query to determine the scope and impact of any potential ransomware attacks.
 2. Follow Playbook:
 
