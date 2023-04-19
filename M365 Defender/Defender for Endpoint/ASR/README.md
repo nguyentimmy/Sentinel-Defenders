@@ -5,6 +5,6 @@ Attack surfaces are all the places where your organization is vulnerable to cybe
 - Reference: https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/overview-attack-surface-reduction?view=o365-worldwide
 
 ### [+] ASR Core Components 
-AsrRuleBlocked -  Indicates that the ASR rule was triggered, and the potentially malicious activity was blocked.
-AsrRuleAudit - Action type indicates that the ASR rule was triggered, and the event was logged for auditing purposes, but the action was not blocked. 
-AsrRuleEnforced -  Action type indicates that the ASR rule was enforced, and the potentially malicious activity was prevented.
+- AsrRuleBlocked -  Indicates that the ASR rule was triggered, and the potentially malicious activity was blocked.
+- AsrRuleAudit - Action type indicates that the ASR rule was triggered, and the event was logged for auditing purposes, but the action was not blocked. 
+- AsrRuleEnforced -  Action type indicates that the ASR rule was enforced, and the potentially malicious activity was prevented.
