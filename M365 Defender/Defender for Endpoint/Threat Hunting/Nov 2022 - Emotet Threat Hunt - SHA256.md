@@ -1,4 +1,4 @@
-# Nov 2022 - Emotet SHA256 IOC Threat Hunt 
+# Nov 2022 - Emotet SHA256 IOC - Threat Hunt 
 
 ### [+] Defender for Endpoint & Microsoft Sentinel KQL
 ```
