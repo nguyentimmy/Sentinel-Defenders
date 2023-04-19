@@ -10,7 +10,7 @@ DeviceProcessEvents
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
-This rule helps identify potential attempts to add users to the sudo group, which may indicate an attempt to escalate privileges or perform unauthorized actions. Deals closely with MITRE T1136.001
+This rule helps identify potential attempts to add users to the sudo group, which may indicate an attempt to escalate privileges or perform unauthorized actions. Deals closely with MITRE T1136.001.
 
 ### [+] Potential Mitigation Steps
 1. Investigate the user account and local group modification activity to determine if it was authorized or part of regular administrative tasks.
