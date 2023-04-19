@@ -1,6 +1,6 @@
 # Potential Privileged Account Creation 
 
-### Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Defender for Endpoint & Microsoft Sentinel KQL
 ```
 DeviceProcessEvents
 | where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup"
@@ -10,16 +10,16 @@ DeviceProcessEvents
 | project ProcessCreationTime, ProcessCommandLine, DeviceName, AccountName, FileName, LocalGroupName
 
 ```
-:exclamation: You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work. 
+:exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
-### Description 
+### [+] Description 
 This alert is triggered when a process command line is detected that includes both "net user" and "net localgroup" commands, indicating a potential attempt to create a new user account and add it to a local administrative group. The query also checks if the command line contains "administrators" or "Admins", further narrowing the focus on potential privileged account creation events.
 
-### Potential Mitigation Steps
+### [+] Potential Mitigation Steps
 1. Investigate the user account and local group modification activity to determine if it was authorized or part of regular administrative tasks.
 2. Review the user account that initiated the commands and verify if the user has the appropriate privileges to perform such actions. If not, consider revoking the user's elevated privileges.
 3. If the activity is unauthorized or suspicious, reset the passwords for the affected user accounts and remove any unauthorized users from the local groups.
 
-### Resources 
-https://atomicredteam.io/persistence/T1098/
-https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.md
+### [+] Resources 
+- https://atomicredteam.io/persistence/T1098/
+- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1098/T1098.md
