@@ -2,6 +2,8 @@
 
 ### [+] Defender for Endpoint & Microsoft Sentinel KQL
 ```
+// This will search for the Indicators of Compromise (IOCs) in the form of SHA256 hashes within the link containing the TXT file.
+
 let Emotet = externaldata(sha256: string)[@"https://githubraw.com/Cisco-Talos/IOCs/main/2022/11/Emotet_parents.txt"] with (format="txt", ignoreFirstRecord=True);
 DeviceFileEvents
 | where SHA256 in (Emotetsha)
