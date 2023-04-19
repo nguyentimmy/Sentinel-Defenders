@@ -16,5 +16,5 @@ Attack surface reduction rules target certain software behaviors, such as:
 - AsrRuleEnforced -  Action type indicates that the ASR rule was enforced, and the potentially malicious activity was prevented.
 
 ### [+] Resources
-[Overview of ASR](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/overview-attack-surface-reduction?view=o365-worldwide)
-[How to configure ASR](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide)
+- [Overview of ASR](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/overview-attack-surface-reduction?view=o365-worldwide)
+- [How to configure ASR](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide)
