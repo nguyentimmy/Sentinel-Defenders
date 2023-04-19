@@ -1,4 +1,4 @@
-# Potential Privileged Account Creation 
+# ASR Triggered By All Blocks
 
 ### [+] Defender for Endpoint & Microsoft Sentinel KQL
 ```
