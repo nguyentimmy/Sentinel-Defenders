@@ -12,8 +12,8 @@ DeviceEvents
 This alert triggers when SmartScreen on a Windows device has been overridden by a user. Recommended to investigate the potentially malicious application or website triggering the warning and take appropriate action to mitigate any risks. 
 
 ### [+] Recommended Actions
-1. Investigate the potentially malicious application or website triggering the SmartScreen warning.
-2.If malicious, contact the user to remove the application or software.
+1. Investigate the potentially malicious application or website triggering the SmartScreen warning. Run an anti-virus scan or analyze the logs.
+2. If malicious file is found, contact the end user immediately to remove the application or software. Isolate the device if needed. 
 3. Train users on safe browsing practices and the importance of avoiding potentially malicious websites or applications.
 
 ### [+] Resources
