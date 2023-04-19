@@ -17,3 +17,6 @@ If this alert is triggered, it is recommended to investigate the potentially mal
 1. Investigate the potentially malicious application or website triggering the SmartScreen warning.
 2. Scan the affected device(s) for signs of compromise, such as malware or unauthorized access.
 3. Train users on safe browsing practices and the importance of avoiding potentially malicious websites or applications.
+
+### [+] Resources
+- [What is Windows Smart Screen?](https://learn.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
