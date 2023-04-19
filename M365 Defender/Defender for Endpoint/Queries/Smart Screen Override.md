@@ -18,5 +18,3 @@ This alert triggers when SmartScreen on a Windows device has been overridden by 
 
 ### [+] Resources
 - [What is Windows Smart Screen?](https://learn.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
-
-"
