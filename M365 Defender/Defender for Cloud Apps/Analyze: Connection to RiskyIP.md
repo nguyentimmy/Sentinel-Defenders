@@ -19,7 +19,7 @@ CloudAppEvents
       AlertUri = parse_json(RawEventData).AlertUri,
       AlertDisplayName = parse_json(RawEventData).AlertDisplayName,
       AlertSeverity = parse_json(RawEventData).AlertSeverity
-| project  Timestamp, AccountDisplayName, ActionType, IPAddress, IPCategory, ISP, Application, IsAnonymousProxy, DeviceType
+| project  TimeGenerated, AccountDisplayName, ActionType, IPAddress, IPCategory, ISP, Application, IsAnonymousProxy, DeviceType
 ```
 ❗ You MAY need to turn on Microsoft 365 Defender or Microsoft Defender for Endpoint Data connector on Sentinel in order for this KQL to work.
 
