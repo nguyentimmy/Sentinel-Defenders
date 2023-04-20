@@ -1,11 +1,21 @@
 # Smart Screen Override 
 
-### [+] Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Defender for Endpoint KQL
 ```
 DeviceEvents
 | where Timestamp > ago(1d)
-| where ActionType == "SmartScreenUserOverride
+| where ActionType == "SmartScreenUserOverride"
+| project DeviceName, DeviceId, ActionType, InitiatingProcessCommandLine, ReportId
 ```
+
+### [+] Microsoft Sentinel KQL
+```
+DeviceEvents
+| where TimeGenerated > ago(1d)
+| where ActionType == "SmartScreenUserOverride"
+| project DeviceName, DeviceId, ActionType, InitiatingProcessCommandLine, ReportId
+```
+
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
