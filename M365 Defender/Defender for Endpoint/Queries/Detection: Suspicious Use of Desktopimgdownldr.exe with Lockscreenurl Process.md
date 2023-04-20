@@ -32,4 +32,5 @@ Could abuse this executable by using it to execute malicious code or payloads, m
 3. Block the execution of the desktopimgdownldr.exe file if it is determined to be malicious or unnecessary for business purposes.
 
 ### [+] Resources 
-- [T1197](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1197/T1197.md)
+- [MITRE T1197](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1197/T1197.md)
+- [How this attack works?](https://www.sentinelone.com/labs/living-off-windows-land-a-new-native-file-downldr/)
