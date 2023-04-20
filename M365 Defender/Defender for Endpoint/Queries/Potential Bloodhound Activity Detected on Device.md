@@ -1,4 +1,4 @@
-# Potential Bloodhound Activity Detected on Device
+# Potential Bloodhound Activity Detected on Device - Detection Or Hunt Rule
 
 ### [+] Defender for Endpoint
 ```
