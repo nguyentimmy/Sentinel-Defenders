@@ -1,4 +1,4 @@
-# Potential Privileged Account Creation 
+# Potential Local Admin Account Creation
 
 ### [+] Defender for Endpoint & Microsoft Sentinel KQL
 ```
