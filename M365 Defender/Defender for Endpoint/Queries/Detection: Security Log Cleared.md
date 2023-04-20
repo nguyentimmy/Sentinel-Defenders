@@ -11,7 +11,7 @@ DeviceEvents
 
 ### [+] Microsoft Sentinel KQL
 ```
-// 
+// Results seems to be better on Defender
 DeviceEvents
 | where TimeGenerated > ago(1d)
 | where ActionType == 'SecurityLogCleared'
