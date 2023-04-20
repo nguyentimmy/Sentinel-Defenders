@@ -1,6 +1,6 @@
-# Possible AntiVirus Reconnaissance & Discovery KQL
+# Possible AntiVirus Reconnaissance & Discovery 
 
-### [+] Defender for Endpoint 
+### [+] Defender for Endpoint KQL
 ```
 DeviceProcessEvents
 | where FileName =~ "WMIC.exe"
@@ -23,6 +23,7 @@ DeviceProcessEvents
 
 ### [+] Description 
 This query detects suspicious WMIC executions with the command "AntiVirusProduct" in the process command line. The use of WMIC can be a sign of suspicious activity as it can be used to execute commands remotely and is often used by attackers. This rule specifically looks for the use of WMIC to query the list of AntiVirusProduct, which could be an indicator of an attacker attempting to find ways to bypass antivirus protection.
+If the command `wmic /namespace:\\root\SecurityCenter2 path AntiVirusProduct get displayName, displayVersion` appears in the search, it maybe a possibility that an attacker may try to retrieve the information on the anti-virus to evade detection.
 
 ### [+] Recommended Actions
 1. Investigate the device to determine if the WMIC execution is legitimate or if it is a sign of malicious activity.
