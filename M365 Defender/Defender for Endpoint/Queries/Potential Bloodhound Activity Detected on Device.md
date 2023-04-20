@@ -1,4 +1,4 @@
-# Potential Bloodhound Activity Detected on Device - Detection Or Hunt Rule
+# Potential Bloodhound Activity Detected on Device 
 
 ### [+] Defender for Endpoint
 ```
@@ -24,7 +24,7 @@ DeviceProcessEvents
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
- This alert is generated when Bloodhound-related processes or files are detected on a device in the environment. Bloodhound is a popular tool used in Active Directory environments to gather information about user and computer accounts, group memberships, and other AD objects to identify potential attack paths. Attackers can use Bloodhound to move laterally within the network and escalate privileges, making it a potential threat to the organization's security.
+This alert is generated when Bloodhound-related processes or files are detected on a device in the environment. Bloodhound is a popular tool used in Active Directory environments to gather information about user and computer accounts, group memberships, and other AD objects to identify potential attack paths. Attackers can use Bloodhound to move laterally within the network and escalate privileges, making it a potential threat to the organization's security.
 
 ### [+] Recommended Actions
 1. Investigate the device where the Bloodhound-related activity was detected to determine the scope and severity of the potential threat.
