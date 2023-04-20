@@ -21,7 +21,7 @@ DeviceEvents
 ### [+] Description 
 This detection monitors for security logs being cleared on devices, which could indicate an attempt to cover up malicious activity or hide unauthorized access to a system.
 
-### [+] Potential Mitigation Steps
+### [+] Recommended Actions
 
 1. When this alert is triggered, investigate the reason for the cleared security logs, ask the user if this was authorized. 
 2. If not authorized, try to review the logs before they were cleared, as well as any other logs on the device, to determine if there was any suspicious activity or unauthorized access. 
