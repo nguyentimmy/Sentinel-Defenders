@@ -21,6 +21,8 @@ CloudAppEvents
      FileData = parse_json(RawEventData).FileData
 | project TimeGenerated, ActionType, Application, DetectionMethod, FileData, EventDeepLink
 ```
+:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+
 ### [+] Description
 "ATP" stands for "Advanced Threat Protection", which is a security feature in Microsoft 365 that can detect and respond to advanced threats, including malware. However, it is also possible that other types of security events related to ATP could trigger this query
 
