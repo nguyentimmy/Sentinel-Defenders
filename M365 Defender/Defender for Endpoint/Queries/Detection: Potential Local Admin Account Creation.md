@@ -1,6 +1,6 @@
 # Potential Local Admin Account Creation
 
-### [+] Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Defender for Endpoint
 ```
 DeviceProcessEvents
 | where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup" or ActionType == 'UserAccountCreated'
@@ -20,7 +20,7 @@ DeviceProcessEvents
 | project TimeGenerated, DeviceName, DeviceId, ProcessCommandLine, AccountName, FileName, LocalGroupName, ReportId
 ```
 
-:exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
 This alert is triggered when a process command line is detected that includes both "net user" and "net localgroup" commands, indicating a potential attempt to create a new user account and add it to a local administrative group. The query also checks if the command line contains "administrators" or "Admins", further narrowing the focus on potential privileged account creation events. Closely deals with MITRE T1136.001.
