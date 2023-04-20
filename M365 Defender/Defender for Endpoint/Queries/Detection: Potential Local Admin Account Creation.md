@@ -7,9 +7,19 @@ DeviceProcessEvents
 | where ProcessCommandLine contains "administrators" or ProcessCommandLine contains "Admins"
 | extend AccountName = extract("net user (.*?) /add", 1, ProcessCommandLine) // Extract the account name
 | extend LocalGroupName = extract("net localgroup (.*?) ", 1, ProcessCommandLine) // Extract the local group name
-| project ProcessCreationTime, ProcessCommandLine, DeviceName, AccountName, FileName, LocalGroupName
+| project Timestamp, DeviceName, DeviceId, ProcessCommandLine, AccountName, FileName, LocalGroupName, ReportId
 
 ```
+### Microsoft Sentinel KQL
+```
+DeviceProcessEvents
+| where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup"
+| where ProcessCommandLine contains "administrators" or ProcessCommandLine contains "Admins"
+| extend AccountName = extract("net user (.*?) /add", 1, ProcessCommandLine) // Extract the account name
+| extend LocalGroupName = extract("net localgroup (.*?) ", 1, ProcessCommandLine) // Extract the local group name
+| project TimeGenerated, DeviceName, DeviceId, ProcessCommandLine, AccountName, FileName, LocalGroupName, ReportId
+```
+
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
