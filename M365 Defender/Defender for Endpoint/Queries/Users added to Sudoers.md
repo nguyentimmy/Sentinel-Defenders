@@ -1,12 +1,23 @@
 # Users added to Sudoers
 
-### [+] Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Defender for Endpoint KQL
 ```
-let Commands = dynamic([@"usermod -aG sudo", @"usermod -a -G sudo"]);
+let Sudo = dynamic([@"usermod -aG sudo", @"usermod -a -G sudo"]);
 DeviceProcessEvents
 | extend RegexGroupAddition = extract("adduser(.*) sudo", 0, ProcessCommandLine)
-| where ProcessCommandLine has_any (Commands) or isnotempty(RegexGroupAddition)
+| where ProcessCommandLine has_any (Sudo) or isnotempty(RegexGroupAddition)
+| project Timestamp, DeviceName, DeviceId, ActionType, InitiatingProcessCommandLine, ReportId
 ```
+
+### [+] Microsoft Sentinel KQL
+```
+let Sudo = dynamic([@"usermod -aG sudo", @"usermod -a -G sudo"]);
+DeviceProcessEvents
+| extend RegexGroupAddition = extract("adduser(.*) sudo", 0, ProcessCommandLine)
+| where ProcessCommandLine has_any (Sudo) or isnotempty(RegexGroupAddition)
+| project TimeGenerated, DeviceName, DeviceId, ActionType, InitiatingProcessCommandLine, ReportId
+```
+
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
