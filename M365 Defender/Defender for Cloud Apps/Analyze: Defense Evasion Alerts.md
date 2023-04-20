@@ -21,6 +21,9 @@ CloudAppEvents
      AlertSeverity = parse_json(RawEventData).AlertSeverity
 | project AlertUri, AlertDisplayName, AlertSeverity
 ```
+:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+
+
 ### [+] Description
 This KQL query searches through Cloud App Security events to find any instances where a Defense Evasion action was taken.
 
