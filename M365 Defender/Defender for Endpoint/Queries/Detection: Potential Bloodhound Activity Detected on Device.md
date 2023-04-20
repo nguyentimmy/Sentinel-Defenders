@@ -8,20 +8,20 @@ let BloodhoundExe = dynamic(['SharpHound.exe', 'BloodHound.exe', 'Neo4j-Manageme
 DeviceProcessEvents
 | where Timestamp > ago(1d)
 | where ProcessCommandLine has_any(BloodhoundCLI) or ProcessCommandLine has_any(BloodhoundExe) or FileName has_any(BloodhoundExe)
-| project Timestamp, DeviceName, AccountName, AccountDomain, ProcessCommandLine, FileName, FolderPath, InitiatingProcessCommandLine, InitiatingProcessFileName
+| project Timestamp, DeviceName, DeviceId, AccountName, AccountDomain, ProcessCommandLine, FileName, FolderPath, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportId
 ```
 
-### [+] Sentinel
+### [+] Microsoft Sentinel KQL
 ```
-// Query for process events containing known BloodHound commands
-let BloodhoundCommands = dynamic(['-collectionMethod', 'invoke-bloodhound', 'get-bloodhounddata']);
+// Query for any bloodhound related processes and files
+let BloodhoundCLI = dynamic([ 'Import-Module Sharphound.ps1' , '-collectionMethod', 'invoke-bloodhound', 'get-bloodhounddata']);
 let BloodhoundExe = dynamic(['SharpHound.exe', 'BloodHound.exe', 'Neo4j-Management.exe']);
 DeviceProcessEvents
-| where TimeGenerated > ago(24h)
-| where ProcessCommandLine has_any(BloodhoundCommands) and ProcessCommandLine has_any(BloodhoundExe)
-| project TimeGenerated, DeviceName, AccountName, AccountDomain, ProcessCommandLine, FileName, FolderPath, InitiatingProcessCommandLine, InitiatingProcessFileName
+| where Timestamp > ago(1d)
+| where ProcessCommandLine has_any(BloodhoundCLI) or ProcessCommandLine has_any(BloodhoundExe) or FileName has_any(BloodhoundExe)
+| project TimeGenerated, DeviceName, DeviceId, AccountName, AccountDomain, ProcessCommandLine, FileName, FolderPath, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportId
 ```
-:exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
 This alert is generated when Bloodhound-related processes or files are detected on a device in the environment. Bloodhound is a popular tool used in Active Directory environments to gather information about user and computer accounts, group memberships, and other AD objects to identify potential attack paths. Attackers can use Bloodhound to move laterally within the network and escalate privileges, making it a potential threat to the organization's security.
