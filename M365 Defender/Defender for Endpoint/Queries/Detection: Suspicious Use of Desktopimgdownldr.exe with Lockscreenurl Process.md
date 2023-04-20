@@ -32,4 +32,4 @@ Could abuse this executable by using it to execute malicious code or payloads, m
 3. Block the execution of the desktopimgdownldr.exe file if it is determined to be malicious or unnecessary for business purposes.
 
 ### [+] Resources 
-- https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1070.001/T1070.001.md
+- [T1197](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1197/T1197.md)
