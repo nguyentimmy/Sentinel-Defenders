@@ -7,13 +7,23 @@ let CobaltStrike = dynamic(["beacon.exe", "cobaltstrike.exe"]);
 DeviceProcessEvents
 | where Timestamp > ago(1d)
 | where ProcessCommandLine has_any (CobaltStrike)
-| project Timestamp, DeviceName, AccountName, AccountDomain, ProcessCommandLine, FileName, InitiatingProcessCommandLine, InitiatingProcessFileName
+| project Timestamp, DeviceName, DeviceID, AccountName, AccountDomain, ProcessCommandLine, FileName, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportID
 ```
-:exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+
+### [+] Microsoft Sentinel KQL
+```
+DeviceEvents
+let CobaltStrike = dynamic(["beacon.exe", "cobaltstrike.exe"]);
+DeviceProcessEvents
+| where TimeGenerated > ago(1d)
+| where ProcessCommandLine has_any (CobaltStrike)
+| project TimeGenerated, DeviceName, DeviceID, AccountName, AccountDomain, ProcessCommandLine, FileName, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportID
+```
+:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
 This query is designed to detect the presence of Cobalt Strike, a commercially available penetration testing tool that is also commonly used by attackers for post-exploitation activities. The query searches for process events containing known Cobalt Strike executables and filters out false positives by examining the process command line. 
-Detecting CobaltStrike is a lot more complex, as it comes in different forms. This alert will generally pick up any device that is pontientally running or downloading an exe of cobaltstrike.
+**Detecting CobaltStrike is a lot more complex, as it comes in different forms. This alert will generally pick up any device that is pontientally running or downloading an exe of cobaltstrike.**
 
 ### [+] Recommended Actions
 Investigate the device where the Colbalt-related activity was detected to determine the scope and severity of the potential threat.
