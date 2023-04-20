@@ -1,13 +1,20 @@
 # Suspicious Local User & Group Modification
 
-### [+] Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Defender for Endpoint KQL
+```
+DeviceProcessEvents
+| where ProcessCreationTime > ago(1d)
+| where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup"
+| project TimeStamp, DeviceName, DeviceID, ProcessCreationTime, ProcessCommandLine, AccountName, FileName, ReportID
+```
+### [+] Microsoft Sentinel KQL
 ```
 DeviceProcessEvents
 | where ProcessCreationTime > ago(1d)
 | where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup"
 | project ProcessCreationTime, ProcessCommandLine, DeviceName, AccountName, FileName
 ```
-:exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
 This alert is triggered when there are events indicating an attempt to add or modify a user account using "net user" command and subsequently adding that user to a local group, such as local administrators group, using "net localgroup" command within the last 24 hours. This activity may indicate unauthorized changes to user accounts and local group memberships, which could potentially lead to privilege escalation or unauthorized access. Closely deals with T1078.003.
