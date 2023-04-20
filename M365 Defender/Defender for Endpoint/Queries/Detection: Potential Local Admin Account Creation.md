@@ -13,7 +13,7 @@ DeviceProcessEvents
 ### Microsoft Sentinel KQL
 ```
 DeviceProcessEvents
-| where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup"
+| where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup" or ActionType == 'UserAccountCreated'
 | where ProcessCommandLine contains "administrators" or ProcessCommandLine contains "Admins"
 | extend AccountName = extract("net user (.*?) /add", 1, ProcessCommandLine) // Extract the account name
 | extend LocalGroupName = extract("net localgroup (.*?) ", 1, ProcessCommandLine) // Extract the local group name
