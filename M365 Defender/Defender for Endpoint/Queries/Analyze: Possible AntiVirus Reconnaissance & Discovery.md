@@ -1,4 +1,4 @@
-# Possible AntiVirus Reconnaissance & Discovery
+# Possible AntiVirus Reconnaissance & Discovery KQL
 
 ### [+] Defender for Endpoint 
 ```
@@ -15,7 +15,7 @@ DeviceProcessEvents
 DeviceProcessEvents
 | where FileName =~ "WMIC.exe"
 | where ProcessCommandLine contains "AntiVirusProduct"
-| project Timestamp, DeviceName, DeviceId, ReportId, ActionType, FolderPath, ProcessCommandLine, InitiatingProcessCommandLine, AccountUpn, InitiatingProcessFileName
+| project TimeGenerated, DeviceName, DeviceId, ReportId, ActionType, FolderPath, ProcessCommandLine, InitiatingProcessCommandLine, AccountUpn, InitiatingProcessFileName
 | summarize count() by DeviceName, DeviceId, ProcessCommandLine, ActionType
 | sort by count_ desc
 ```
