@@ -29,6 +29,8 @@ CloudAppEvents
 | project AccountId, UserId, TotalActivities, ActionsPerformed, OSUsed, IPsUsed
 | sort by TotalActivities
 ```
+❗ You MAY need to turn on Microsoft 365 Defender or Microsoft Defender for Endpoint Data connector on Sentinel in order for this KQL to work.
+
 ### [+] Description
 This KQL query searches for anonymous proxy access in the cloud environment.
 
