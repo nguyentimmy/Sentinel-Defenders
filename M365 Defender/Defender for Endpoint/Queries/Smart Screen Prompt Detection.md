@@ -6,7 +6,7 @@ DeviceEvents
 | where Timestamp > ago(1d)
 | where ActionType has_any('SmartScreenAppWarning', 'SmartScreenUrlWarning')
 | extend SmartScreenDetection = iif(ActionType == "SmartScreenUrlWarning", parse_url(RemoteUrl).Host, FileName)
-| project Timestamp, DeviceName, SmartScreenDetection, ActionType, InitiatingProcessCommandLine
+| project Timestamp, DeviceName, DeviceId, SmartScreenDetection, ActionType, InitiatingProcessCommandLine, ReportId
 ```
 :exclamation: *You will need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
