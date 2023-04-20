@@ -108,4 +108,4 @@ Not available yet.
 This query provides a report of many of the best practice configurations for Microsoft Defender ATP deployment. It checks if the configuration is in line with the recommended settings for various capabilities, such as Antivirus, Tamper Protection, PUA Protection, Cloud Protection, and more. The results are divided into GOOD, BAD, and N/A (if the capability is not applicable). The query also includes a mapping of the different configurations to the OS platform (Windows, macOS, or Linux) and lists the configuration status for each platform. 
 
 ### [+] Resources 
-- [Microsoft Offical KQL](https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/Microsoft%20365%20Defender/General%20queries/Endpoint%20Agent%20Health%20Status%20Report.yaml)
+- Forked from [Microsoft Offical Github Repo](https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/Microsoft%20365%20Defender/General%20queries/Endpoint%20Agent%20Health%20Status%20Report.yaml)
