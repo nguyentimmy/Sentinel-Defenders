@@ -26,4 +26,4 @@ This alert triggers when an event is detected in the Identity Directory indicati
 1. Reset the account password and enforcing password expiration policies
 
 ### [+] Resources
-- [Why should you enforce password expiration?]https://www.n-able.com/blog/why-password-expiration-policies-matter#:~:text=The%20longer%20and%20more%20complicated,an%20organization's%20broader%20cybersecurity%20goals.)
+- [Why should you enforce password expiration?](https://www.n-able.com/blog/why-password-expiration-policies-matter#:~:text=The%20longer%20and%20more%20complicated,an%20organization's%20broader%20cybersecurity%20goals)
