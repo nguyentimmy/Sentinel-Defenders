@@ -15,5 +15,6 @@ Emotet is a ubiquitous and well-known banking trojan that has evolved over the y
 Emotet is back again with a new campaign displaying many characteristics of older runs, including the use of Auto_Open macros inside XLS documents. Cisco Talos has observed an increased activity of spam distributing this new strain beginning in early November 2022,  and the volume of spam and Emotet infrastructure has been increasing since then to target multiple geographies around the world.
 
 ### [+] Resources 
+- Forked from directly from [@Bert-JanP](https://github.com/Bert-JanP), please give him credit and a follow!
 - [Blog](https://blog.talosintelligence.com/emotet-coming-in-hot/)
 
