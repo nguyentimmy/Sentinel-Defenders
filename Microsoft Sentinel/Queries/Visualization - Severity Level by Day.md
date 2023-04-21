@@ -6,7 +6,7 @@ SecurityAlert
 | where TimeGenerated > ago (30d)
 | where ProviderName == "MDATP"
 | summarize Count=count()by AlertSeverity, startofday(TimeGenerated)
-| render columnchart with (kind=unstacked, ytitle="Alert Count", xtitle="Day", title="MDE Alert Severity per day")
+| render columnchart with (kind=unstacked, ytitle="Amount of Alert", xtitle="Days", title="MDE Alert Severity per day")
 ```
 :exclamation: *This chart will NOT work on Defender for Endpoint advanced hunt. Will need to turn on M365 Defender data connectors in order to ingest data.*
 
