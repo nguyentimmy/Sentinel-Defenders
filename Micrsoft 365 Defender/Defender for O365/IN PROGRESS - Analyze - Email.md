@@ -28,3 +28,11 @@ EmailEvents
 | where FileExtension in~ (ExecutableFileExtentions)
 | summarize ['Target Mailboxes'] = make_set(RecipientEmailAddress), ['Sender Addresses'] = make_set(SenderFromAddress), ['Email Subject'] = make_set(Subject) by SHA256, FileName
 ```
+
+# Random Notes 
+```
+| extend 
+    SPF = parse_json(AuthenticationDetails).SPF,
+    DMARC  = parse_json(AuthenticationDetails).DMARC
+ ``` 
+   ![https://github.com/nguyentimmy/msft-security-stack/blob/main/Resources/Pictures/SPF%20JSON.PNG](https://github.com/nguyentimmy/msft-security-stack/blob/main/Resources/Pictures/SPF%20JSON.PNG)
