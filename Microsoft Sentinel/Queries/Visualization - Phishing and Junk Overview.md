@@ -1,7 +1,9 @@
 # Phishing and Junk Overview
 
 ### [+] Sentinel 
+**Query 1**
 ```
+// Piechart of email metrics by day
 SecurityAlert
 | where AlertName contains "Email reported by user as junk" or 
         AlertName contains "Email reported by user as malware or phish" or
@@ -9,6 +11,18 @@ SecurityAlert
         AlertName contains "Phishing email detected at the time of delivery" // This alert needs to be configured in Compliance Portal on the Policies tab
 | summarize count() by AlertName
 | render piechart
+```
+**Query 2**
+```
+// Column chart of email metrics by month
+SecurityAlert
+| where AlertName contains "Email reported by user as junk" or 
+        AlertName contains "Email reported by user as malware or phish" or
+        AlertName contains "A potentially malicious URL click was detected"
+//  AlertName contains "Phishing email detected at the time of delivery" // This alert needs to be configured in Compliance Portal on the Policies tab
+| where TimeGenerated > ago(365d)
+| summarize count() by AlertName, bin(TimeGenerated, 30d)
+| render columnchart with (kind=unstacked, ytitle="Alert Count", xtitle="Month", title="MDE Email Security Alerts per Month")
 ```
 :exclamation: *This chart will NOT work on Defender for Endpoint advanced hunt. Will need to turn on M365 Defender data connectors in order to ingest data.*
 
