@@ -55,4 +55,4 @@ When this is deleted, the device or server can't recover back to the previous ba
 3. Review and update existing security controls to prevent similar incidents from occurring in the future.
 
 ### [+] Resources
-- [What is Cobalt Strike?](https://www.cobaltstrike.com/)
+- [What is ShadowCopy?](https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service)
