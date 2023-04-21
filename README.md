@@ -1,3 +1,3 @@
-## MSFT Security Stack Cheat Sheet & Playbook
+# MSFT Security Stack Cheat Sheet & Playbook
 
-# In progress
+#### In progress!
