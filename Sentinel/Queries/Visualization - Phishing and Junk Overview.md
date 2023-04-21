@@ -1,4 +1,4 @@
-# Visualization: Phishing and Junk Overview
+# Phishing and Junk Overview
 
 ### [+] Sentinel 
 ```
