@@ -1,6 +1,6 @@
 # Potiental CobaltStrike Activity 
 
-### [+] Defender for Endpoint & Microsoft Sentinel KQL
+### [+] Defender for Endpoint 
 ```
 DeviceEvents
 let CobaltStrike = dynamic(["beacon.exe", "cobaltstrike.exe"]);
@@ -19,7 +19,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any (CobaltStrike)
 | project TimeGenerated, DeviceName, DeviceID, AccountName, AccountDomain, ProcessCommandLine, FileName, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportID
 ```
-:exclamation: *You MAY need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
+:exclamation: *You WILL need to turn on **Microsoft 365 Defender** or **Microsoft Defender for Endpoint** Data connector on Sentinel in order for this KQL to work.*
 
 ### [+] Description 
 This query is designed to detect the presence of Cobalt Strike, a commercially available penetration testing tool that is also commonly used by attackers for post-exploitation activities. The query searches for process events containing known Cobalt Strike executables and filters out false positives by examining the process command line. 
