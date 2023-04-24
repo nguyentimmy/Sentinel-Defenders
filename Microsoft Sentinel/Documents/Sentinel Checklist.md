@@ -15,11 +15,13 @@
 - [ ] **Task 1:**  Enable relevant data connectors to ingest logs from various sources like Azure services, Microsoft 365, and third-party security products.
      - [ ] How are workstation and server logs getting forwarded?
           - Is it all getting logged through a centralized forwader to a SIEM?
+               - Third Party Log Management
+               - Native Forwarder (Windows Event Forwarder for Windows, Syslogs for Mac)
+               - EDR / XDR agents
           - Is it all getting logged through an EDR 
-     - [ ] How is data getting ingested?
-          - 
+     - [ ] What data is getting ingested?
           - Ingest data that is relevant to the environment. 
           - What are the other mission critical assets to monitor? 
-          - 
+          
 
-     - [ ]Ensure that required agents (such as Microsoft Monitoring Agent or Azure Log Analytics agent) are installed and configured on the relevant devices.
+     - [ ] Ensure that required agents (such as Microsoft Monitoring Agent or Azure Log Analytics agent) are installed and configured on the relevant devices.
