@@ -1,6 +1,6 @@
 # Possible AntiVirus Reconnaissance & Discovery 
 
-### [+] Defender for Endpoint KQL
+### [+] Defender for Endpoint 
 ```
 DeviceProcessEvents
 | where FileName =~ "WMIC.exe"
@@ -10,7 +10,7 @@ DeviceProcessEvents
 | sort by count_ desc
 ```
 
-### Microsoft Sentinel KQL
+### Sentinel 
 ```
 DeviceProcessEvents
 | where FileName =~ "WMIC.exe"
