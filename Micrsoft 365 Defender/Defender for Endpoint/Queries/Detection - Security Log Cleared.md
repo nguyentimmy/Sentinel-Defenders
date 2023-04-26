@@ -1,6 +1,6 @@
 # Security Log Cleared 
 
-### [+] Defender for Endpoint KQL
+### [+] Defender for Endpoint 
 ```
 DeviceEvents
 | where Timestamp > ago(1d)
@@ -9,7 +9,7 @@ DeviceEvents
 
 ```
 
-### [+] Microsoft Sentinel KQL
+### [+] Sentinel 
 ```
 // Results seems to be better on Defender
 DeviceEvents
