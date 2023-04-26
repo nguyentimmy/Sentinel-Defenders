@@ -1,6 +1,6 @@
 # Smart Screen Override 
 
-### [+] Defender for Endpoint KQL
+### [+] Defender for Endpoint 
 ```
 DeviceEvents
 | where Timestamp > ago(1d)
@@ -8,7 +8,7 @@ DeviceEvents
 | project DeviceName, DeviceId, ActionType, InitiatingProcessCommandLine, ReportId
 ```
 
-### [+] Microsoft Sentinel KQL
+### [+] Sentinel KQL
 ```
 DeviceEvents
 | where TimeGenerated > ago(1d)
