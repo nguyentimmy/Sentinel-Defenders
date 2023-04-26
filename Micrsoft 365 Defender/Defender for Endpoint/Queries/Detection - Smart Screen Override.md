@@ -8,7 +8,7 @@ DeviceEvents
 | project DeviceName, DeviceId, ActionType, InitiatingProcessCommandLine, ReportId
 ```
 
-### [+] Sentinel KQL
+### [+] Sentinel.
 ```
 DeviceEvents
 | where TimeGenerated > ago(1d)
