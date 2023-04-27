@@ -10,7 +10,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, DeviceID, AccountName, AccountDomain, ProcessCommandLine, FileName, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportID
 ```
 
-### [+] Microsoft Sentinel KQL
+### [+] Sentinel
 ```
 DeviceEvents
 let CobaltStrike = dynamic(["beacon.exe", "cobaltstrike.exe"]);
