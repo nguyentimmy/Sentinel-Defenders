@@ -7,11 +7,9 @@ DeviceNetworkEvents
 | where Timestamp > ago(1d)
 | where RemoteUrl has "torrent" or RemoteUrl has "vuze" or RemoteUrl has "azureus" or RemoteUrl endswith ".tor" or InitiatingProcessFileName has "torrent" or InitiatingProcessFileName has "vuze" or InitiatingProcessFileName contains "azureus" 
 | project Timestamp, DeviceName, DeviceId, InitiatingProcessFileName, RemoteUrl , RemoteIP , RemotePort, ReportId
-
-
 ```
 
-### [+] Sentinel KQL
+### [+] Sentinel 
 ```
 DeviceNetworkEvents 
 | where TimeGenerated > ago(1d)
