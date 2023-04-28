@@ -10,7 +10,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, DeviceId, ProcessCommandLine, AccountName, FileName, LocalGroupName, ReportId
 
 ```
-### Microsoft Sentinel KQL
+###. Sentinel 
 ```
 DeviceProcessEvents
 | where ProcessCommandLine has "net user" and ProcessCommandLine has "net localgroup" or ActionType == 'UserAccountCreated'
