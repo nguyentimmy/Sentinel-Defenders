@@ -11,7 +11,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, DeviceId, AccountName, AccountDomain, ProcessCommandLine, FileName, FolderPath, InitiatingProcessCommandLine, InitiatingProcessFileName, ReportId
 ```
 
-### [+] Microsoft Sentinel KQL
+### [+] Microsoft Sentinel 
 ```
 // Query for any bloodhound related processes and files
 let BloodhoundCLI = dynamic([ 'Import-Module Sharphound.ps1' , '-collectionMethod', 'invoke-bloodhound', 'get-bloodhounddata']);
