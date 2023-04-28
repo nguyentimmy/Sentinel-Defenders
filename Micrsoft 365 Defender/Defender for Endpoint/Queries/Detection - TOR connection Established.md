@@ -1,6 +1,6 @@
 # TOR Connection Established
 
-### [+] Defender for Endpoint KQL
+### [+] Defender for Endpoint
 ```
 // README! A custom detection rule may NOT be needed since MDE already have this built in
 DeviceNetworkEvents 
@@ -11,7 +11,7 @@ DeviceNetworkEvents
 
 ```
 
-### [+] Microsoft Sentinel KQL
+### [+] Sentinel KQL
 ```
 DeviceNetworkEvents 
 | where TimeGenerated > ago(1d)
